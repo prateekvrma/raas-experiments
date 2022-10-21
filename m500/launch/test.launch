@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="m500" type="offb_move_back.py" name="offb_move_back_node" output="screen"></node>
+    <node pkg="m500" type="run_arm_and_offboard.py" name="set_offboard_node" output="screen"></node>
+    <node pkg="m500" type="offb_land.py" name="offb_land_node" output="screen"></node> 
+    <!-- <node pkg="m500" type="run_arm_and_offboard.py" name="set_offboard_node" output="screen"></node> -->
+</launch>

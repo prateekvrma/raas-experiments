@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="m500" type="cam_des.py" name="camera_des_node" output="screen"></node>
+    <include file="$(find apriltag_ros)/launch/continuous_detection.launch" />
+    <node pkg="m500" type="takeoff_hold.py" name="take0ff_and_hold_node" output="screen"></node>
+    <node pkg="m500" type="run_arm_and_offboard.py" name="run_arm_and_offboard_node" output="screen"></node>
+    <node pkg="m500" type="hold_detect.py" name="hold_detect_node" output="screen"></node>
+</launch>
+
+
+<!-- <launch>
+    <node pkg="m500" type="takeoff_hold.py" name="take0ff_and_hold_node" output="screen"></node>
+    <node pkg="m500" type="run_arm_and_offboard.py" name="run_arm_and_offboard_node" output="screen"></node>
+</launch> -->
